@@ -14,3 +14,9 @@
 >- LED (Status)
 >- Bluetooth (ESP32 inbuild)
 >- WiFi for Matter (ESP32 inbuild)
+
+
+> [!IMPORTANT]
+>- [ ] Home Assitant Extension
+>- [ ] ESP32 Code
+>- [ ] Webbase Code for ESP32
