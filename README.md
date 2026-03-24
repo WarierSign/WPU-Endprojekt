@@ -17,6 +17,6 @@
 
 
 > [!IMPORTANT]
->- [ ] Home Assitant Extension
+>- [ ] Home Assistant Support
 >- [ ] ESP32 Code
 >- [ ] Webbase Code for ESP32
