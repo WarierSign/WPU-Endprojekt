@@ -14,6 +14,9 @@
 >- LED (Status)
 >- Bluetooth (ESP32 inbuild)
 >- WiFi for Matter (ESP32 inbuild)
+>- Pizo
+>- LED (Licht)
+>- Lüfter
 
 
 > [!IMPORTANT]
@@ -24,3 +27,11 @@
 ```
 git clone https://github.com/wariersign/wpu-projekt.git
 ```
+
+### Pins
+Tempereratursensor = A0
+
+
+Licht = 3
+
+Lüfter = 5
