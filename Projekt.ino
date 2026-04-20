@@ -30,7 +30,8 @@ void setup() {
   lcd.backlight();
 
   //Pins festlegen
-  pinMode(Lichtschalter, OUTPUT);
+  pinMode(Piezzo, OUTPUT);
+  pinMode(Lichtschalter, INPUT_PULLUP);
   pinMode(Licht, OUTPUT);
 
   //Variablen festlegen
