@@ -18,7 +18,7 @@ int TemperaturUpdateDelay = 500;
 
 //Andere Variablien
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-int Feuertemp = 10;
+int Feuertemp = 25;
 bool Lichtstatus;
 bool Feuer = false; //gerade kein Feuer hoffentlich
 
