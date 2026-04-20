@@ -7,6 +7,7 @@ int Temperatursensor = A0;
 int Lichtschalter = 2;
 int Licht = 3;
 int Piezzo = 6;
+int Luefter = 5;
 
 //Sensorwerte
 int RohOuputTemperatur = 0;
@@ -19,8 +20,10 @@ int TemperaturUpdateDelay = 500;
 //Andere Variablien
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 int Feuertemp = 25;
+int Lueftertemp = 20;
 bool Lichtstatus;
 bool Feuer = false; //gerade kein Feuer hoffentlich
+bool Luefterstatus = false;
 
 void setup() {
   Serial.begin(9600);
@@ -33,6 +36,7 @@ void setup() {
   pinMode(Piezzo, OUTPUT);
   pinMode(Lichtschalter, INPUT_PULLUP);
   pinMode(Licht, OUTPUT);
+  pinMode(Luefter, OUTPUT);
 
   //Variablen festlegen
   Lichtstatus = false; //Licht ist gerade aus;
@@ -45,6 +49,8 @@ void loop() {
   Lichtsystem();
 
   Feuerarlam();
+
+  Lueftersystem();
 
 
   //Monitor
@@ -83,7 +89,29 @@ void Feuerarlam() {
 
   if(Feuer == true) {
     digitalWrite(Piezzo, HIGH);
-    delay(500);
+    Serial.print("Feuer an");
+  }
+  else {
+    Serial.print("Feuer aus");
     digitalWrite(Piezzo, LOW);
+  }
+}
+
+void Lueftersystem() {
+  if(temperatur >= Lueftertemp) {
+    Luefterstatus = true;
+  } else {
+    Luefterstatus = false;
+  }
+
+
+
+  if(Luefterstatus == true) {
+    Serial.print("Lüfter aktiv");
+    digitalWrite(Luefter, HIGH);
+  }
+  else {
+    Serial.print("Lüfter deaktiv");
+    digitalWrite(Luefter, LOW);
   }
 }
