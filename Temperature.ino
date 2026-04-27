@@ -10,6 +10,7 @@ Thermistor thermistor;
 
 void SetupTemperature(int pin) {
   Pin = pin;
+  pinMode(Pin, INPUT);
 }
 
 int GetTemp() {
