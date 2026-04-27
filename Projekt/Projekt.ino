@@ -9,10 +9,15 @@ int Licht = 3;
 int Piezzo = 6;
 int Luefter = 5;
 
+//Bluetooth Modul Pins
+int RXDPin = 2;
+int TXDPin = 3;
+
 //Sensorwerte
 int RohOuputTemperatur = 0;
 int temperatur;
 int tasterstatus = 0;
+int AirQualityData;
 
 //Zeiten
 int TemperaturUpdateDelay = 500;
