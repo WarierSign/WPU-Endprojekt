@@ -36,3 +36,4 @@ void loop() {
 
   delay(500); //Hat Arduino crashes verursacht
 }
+
