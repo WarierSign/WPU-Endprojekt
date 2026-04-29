@@ -15,4 +15,4 @@ void Lueftersystem() {
     Serial.print("Lüfter deaktiv");
     digitalWrite(Luefter, LOW);
   }
-}
+}y

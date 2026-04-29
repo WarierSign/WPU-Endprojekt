@@ -4,6 +4,8 @@
 
 
 #include <SoftwareSerial.h>
+
+
 SoftwareSerial bleSerial(RXDPin, TXDPin);
 int BleOutput;
 int BleInput;
@@ -16,7 +18,6 @@ void BluetoothInit() {
 void BluetoothGet() {
   BluetoothCheck();
   BleOutput = bleSerial.read();
-  }
 }
 
 void BluetoothSend() {

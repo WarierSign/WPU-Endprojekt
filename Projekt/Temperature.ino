@@ -6,6 +6,8 @@
 #include <Thermistor.h>
 #include <NTC_Thermistor.h>
 
+
+int pin;
 int Pin;
 int Referenzwiderstand = 10000;
 int Nominalwiderstand = 10000;
