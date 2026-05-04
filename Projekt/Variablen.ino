@@ -19,9 +19,3 @@ int Lueftertemp = 20;
 bool Lichtstatus = false; //Hinzufügen von "= false"
 bool Feuer = false; //gerade kein Feuer hoffentlich
 bool Luefterstatus = false;
-
-
-
-
-//Variablen festlegen
-//Lichtstatus = false; //Licht ist gerade aus;
