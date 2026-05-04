@@ -1,13 +1,11 @@
+//-------------------------------//
+//WPU Projekt von Aaron und David//
+//-------------------------------//
+
 void Lichtsystem() {
   tasterstatus = digitalRead(Lichtschalter);
 
   if(tasterstatus == HIGH) {
-    if(Lichtstatus == true) {
-      digitalWrite(Licht, LOW);
-      Lichtstatus = false;
-    } else {
-      digitalWrite(Licht, HIGH);
-      Lichtstatus = true;
-    }
+    ToogleLight(Licht); //nutzt direkt die Klasse vom HouseLight anstatt selber eine neue Sache zu machen
   }
 }
