@@ -3,9 +3,6 @@
 //-------------------------------//
 
 
-#include <Thermistor.h>
-#include <NTC_Thermistor.h>
-
 
 int pin;
 int Pin;
