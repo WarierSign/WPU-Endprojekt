@@ -21,17 +21,20 @@ int TXDPin = 3;
 void setup() {
   Serial.begin(9600);
 
-  //LCD Libary initalisieren
-  lcd.init();
-  lcd.backlight();
-
   //Pins festlegen
   pinMode(Piezzo, OUTPUT);
   pinMode(Lichtschalter, INPUT_PULLUP);
-  pinMode(Licht, OUTPUT);
   pinMode(Luefter, OUTPUT);
 
+  //setup Klasssen
+  SetupMonitor();
+  BluetoothInit();
+  //SetupAirQuality(//weiß net welchen pin);
+  SetupHouseLight(Licht);
+  SetupTemperature(Temperatursensor);
 
+  //einmal clearen weil why not
+  ErraseMonitor();
 }
 
 void loop() {
@@ -46,8 +49,7 @@ void loop() {
 
 
   //LCD
-  lcd.setCursor(0,0);
-  lcd.print(temperatur);
+  WriteOnMonitor(String(temperatur));
 
   delay(500); //Hat Arduino crashes verursacht
 }
