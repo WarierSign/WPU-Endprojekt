@@ -3,8 +3,6 @@
 //-------------------------------//
 
 
-#include <SoftwareSerial.h>
-
 
 SoftwareSerial bleSerial(RXDPin, TXDPin);
 int BleOutput;
