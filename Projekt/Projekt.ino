@@ -5,9 +5,9 @@
 
 //Sensorpins
 int Temperatursensor = A0;
-int Lichtschalter = 2;
-int Licht = 3;
-int Piezzo = 6;
+int Lichtschalter = 4;
+int Licht = 7;
+int Piezzo = 8;
 int Luefter = 5;
 
 //Bluetooth Modul Pins
